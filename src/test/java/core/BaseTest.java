@@ -1,7 +1,6 @@
 package core;
 
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 public class BaseTest {
 
@@ -10,8 +9,9 @@ public class BaseTest {
         DriverProvider.getDriver();
     }
 
+
 //    @AfterSuite
-//    public void tearDown() {
-//        DriverProvider.quitDriver();
-//    }
+    public void tearDown() {
+        DriverProvider.quitDriver();
+    }
 }
